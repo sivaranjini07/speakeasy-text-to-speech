@@ -171,7 +171,5 @@ This project demonstrates Python backend development, REST API design, request v
 
 ## Author
 
-**Your Name**  
+Sivaranjini G
 Python Internship Project
-
-Replace the author details and repository URL with your own before publishing.
