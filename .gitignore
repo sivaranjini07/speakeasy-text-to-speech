@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Generated audio
+backend/generated_audio/*
+!backend/generated_audio/.gitkeep
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/

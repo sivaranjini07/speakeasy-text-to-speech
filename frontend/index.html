@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SpeakEasy converts your text into speech in multiple languages.">
+  <title>SpeakEasy | Text to Speech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <nav class="topbar">
+      <a class="brand" href="#"><span class="brand-icon">♫</span> SpeakEasy</a>
+      <span class="top-tag">TEXT TO SPEECH STUDIO</span>
+    </nav>
+
+    <section class="hero">
+      <div class="eyebrow"><span></span> YOUR WORDS, OUT LOUD</div>
+      <h1>Give your words<br><span>a voice.</span></h1>
+      <p class="hero-copy">Turn written text into clear, natural-sounding speech. Choose a language, create your audio, and listen anywhere.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="section-heading">
+        <div><p class="step-label">01 / YOUR SCRIPT</p><h2>What would you like to hear?</h2></div>
+        <span class="counter" id="counter">0 / 5000</span>
+      </div>
+      <label class="sr-only" for="text-input">Text to convert</label>
+      <textarea id="text-input" maxlength="5000" placeholder="Type or paste your text here...&#10;&#10;For example: Welcome to SpeakEasy. Your next idea deserves to be heard."></textarea>
+
+      <div class="controls">
+        <div class="field">
+          <label for="language">LANGUAGE</label>
+          <select id="language">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ta">Tamil</option>
+            <option value="te">Telugu</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="pt">Portuguese</option>
+          </select>
+        </div>
+        <label class="toggle-wrap" for="slow">
+          <span><strong>Slow speech</strong><small>Speak at a slower pace</small></span>
+          <input type="checkbox" id="slow"><span class="toggle"></span>
+        </label>
+      </div>
+
+      <button id="generate" class="primary-button"><span>Generate speech</span><span aria-hidden="true">↗</span></button>
+      <p id="status" class="status" role="status" aria-live="polite">Your audio will appear below.</p>
+
+      <div id="result" class="result hidden">
+        <div class="result-top"><div><p class="step-label">02 / YOUR AUDIO</p><h2>Ready to listen</h2></div><span class="audio-mark">♫</span></div>
+        <audio id="audio-player" controls></audio>
+        <a id="download" class="download-link" download="speakeasy-audio.mp3">↓ Download MP3</a>
+      </div>
+    </section>
+    <footer><span>SpeakEasy · Built with Python + FastAPI</span><span>Make information easier to hear.</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
